@@ -4,25 +4,24 @@
 // that code so it'll be compiled.
 
 require("@rails/ujs").start()
+require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
 import 'bootstrap'
+import 'jquery-2.1.3.min'
+import 'jquery.actual.min'
+import 'jquery.scrollTo.min'
+import 'contact'
+import 'script'
+import 'smoothscroll'
+
 import '@fortawesome/fontawesome-free/js/all'
-// import '../javascripts/hello_webpacker'
-import '../javascripts/application'
-// import '../javascripts/bootstrap'
-// import '../javascripts/contact'
-// import '../javascripts/html5'
-// import '../javascripts/respond'
-// import '../javascripts/script'
-// import '../javascripts/selectivizr'
-// import '../javascripts/smoothscroll'
+import '../src/application.scss'
 
-// import '../stylesheets/hello_webpack'
-import '../stylesheets/application'
+const images = require.context('../images/', true)
 
-require.context('../images', true, /\.(png|jpg|jpeg|svg)$/);
+
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
